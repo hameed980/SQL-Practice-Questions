@@ -1,101 +1,101 @@
 product_id,product_name,category,price
-1,Product_1,Books,513.78
-2,Product_2,Sports,280.69
-3,Product_3,Home,836.38
-4,Product_4,Home,980.44
-5,Product_5,Sports,251.29
-6,Product_6,Clothing,555.75
-7,Product_7,Electronics,389.75
-8,Product_8,Clothing,922.65
-9,Product_9,Sports,513.16
-10,Product_10,Clothing,880.53
-11,Product_11,Sports,865.39
-12,Product_12,Home,283.48
-13,Product_13,Home,792.11
-14,Product_14,Clothing,420.79
-15,Product_15,Clothing,934.91
-16,Product_16,Electronics,512.66
-17,Product_17,Home,822.34
-18,Product_18,Electronics,290.01
-19,Product_19,Clothing,305.57
-20,Product_20,Sports,591.07
-21,Product_21,Home,998.91
-22,Product_22,Sports,494.74
-23,Product_23,Electronics,157.11
-24,Product_24,Electronics,543.19
-25,Product_25,Books,351.67
-26,Product_26,Home,556.4
-27,Product_27,Home,548.0
-28,Product_28,Electronics,460.79
-29,Product_29,Sports,328.56
-30,Product_30,Home,196.77
-31,Product_31,Electronics,700.52
-32,Product_32,Books,576.08
-33,Product_33,Clothing,241.23
-34,Product_34,Home,777.79
-35,Product_35,Clothing,53.21
-36,Product_36,Sports,747.26
-37,Product_37,Books,708.18
-38,Product_38,Home,813.29
-39,Product_39,Clothing,392.22
-40,Product_40,Clothing,667.05
-41,Product_41,Electronics,822.54
-42,Product_42,Clothing,981.01
-43,Product_43,Sports,500.38
-44,Product_44,Clothing,46.65
-45,Product_45,Sports,507.27
-46,Product_46,Sports,594.28
-47,Product_47,Electronics,871.0
-48,Product_48,Books,875.45
-49,Product_49,Sports,445.9
-50,Product_50,Clothing,530.69
-51,Product_51,Clothing,462.36
-52,Product_52,Sports,725.22
-53,Product_53,Clothing,415.88
-54,Product_54,Home,658.23
-55,Product_55,Electronics,162.82
-56,Product_56,Clothing,474.8
-57,Product_57,Electronics,969.51
-58,Product_58,Sports,345.18
-59,Product_59,Sports,695.78
-60,Product_60,Sports,653.34
-61,Product_61,Electronics,853.25
-62,Product_62,Clothing,853.82
-63,Product_63,Home,860.75
-64,Product_64,Electronics,386.21
-65,Product_65,Home,323.49
-66,Product_66,Clothing,721.53
-67,Product_67,Clothing,761.81
-68,Product_68,Electronics,873.66
-69,Product_69,Books,45.54
-70,Product_70,Home,77.74
-71,Product_71,Sports,634.85
-72,Product_72,Home,921.72
-73,Product_73,Clothing,997.45
-74,Product_74,Clothing,749.3
-75,Product_75,Electronics,439.63
-76,Product_76,Books,107.46
-77,Product_77,Sports,637.41
-78,Product_78,Home,873.85
-79,Product_79,Books,449.24
-80,Product_80,Sports,697.06
-81,Product_81,Clothing,904.39
-82,Product_82,Clothing,55.53
-83,Product_83,Electronics,798.18
-84,Product_84,Electronics,300.43
-85,Product_85,Home,381.09
-86,Product_86,Books,154.11
-87,Product_87,Books,535.85
-88,Product_88,Sports,570.27
-89,Product_89,Home,794.59
-90,Product_90,Electronics,178.28
-91,Product_91,Home,88.18
-92,Product_92,Clothing,872.13
-93,Product_93,Electronics,623.51
-94,Product_94,Books,248.42
-95,Product_95,Electronics,913.7
-96,Product_96,Clothing,151.69
-97,Product_97,Electronics,466.54
-98,Product_98,Books,261.44
-99,Product_99,Clothing,262.77
-100,Product_100,Sports,19.3
+1,Smartphone,Electronics,599.99
+2,Laptop,Electronics,899.99
+3,Tablet,Electronics,399.99
+4,Smartwatch,Electronics,249.50
+5,Headphones,Electronics,129.99
+6,Python Programming,Books,29.99
+7,Data Science Handbook,Books,45.50
+8,Machine Learning Guide,Books,39.99
+9,SQL Mastery,Books,34.99
+10,AI Basics,Books,28.75
+11,Football,Sports,24.50
+12,Tennis Racket,Sports,69.00
+13,Basketball,Sports,29.99
+14,Running Shoes,Sports,89.99
+15,Cricket Bat,Sports,79.50
+16,T-Shirt,Clothing,14.99
+17,Jeans,Clothing,39.99
+18,Jacket,Clothing,59.99
+19,Sneakers,Clothing,74.99
+20,Sweatshirt,Clothing,29.50
+21,Microwave,Home,99.99
+22,Blender,Home,49.99
+23,Vacuum Cleaner,Home,149.99
+24,Coffee Maker,Home,79.99
+25,Air Purifier,Home,129.99
+26,Smartphone Pro,Electronics,649.99
+27,Laptop Ultra,Electronics,949.99
+28,Tablet Max,Electronics,429.99
+29,Smartwatch SE,Electronics,269.50
+30,Noise Cancelling Headphones,Electronics,149.99
+31,Advanced Python,Books,32.99
+32,Big Data Analytics,Books,48.75
+33,Deep Learning Explained,Books,42.50
+34,Mastering SQL,Books,36.99
+35,AI for Beginners,Books,30.25
+36,Soccer Ball,Sports,26.99
+37,Badminton Racket,Sports,65.00
+38,Volleyball,Sports,28.99
+39,Trekking Shoes,Sports,95.99
+40,Hockey Stick,Sports,83.50
+41,Polo Shirt,Clothing,16.99
+42,Casual Jeans,Clothing,42.99
+43,Wool Jacket,Clothing,64.99
+44,Running Sneakers,Clothing,79.99
+45,Hoodie,Clothing,34.50
+46,Toaster,Home,89.99
+47,Juicer,Home,59.99
+48,Steam Iron,Home,139.99
+49,Espresso Machine,Home,85.99
+50,Dehumidifier,Home,135.99
+51,Smartphone Lite,Electronics,574.99
+52,Gaming Laptop,Electronics,979.99
+53,Tablet Air,Electronics,419.99
+54,Fitness Watch,Electronics,239.00
+55,Over-Ear Headphones,Electronics,159.99
+56,Fluent Python,Books,34.99
+57,Data Wrangling,Books,44.99
+58,TensorFlow Guide,Books,46.99
+59,SQL for Data Analysis,Books,37.99
+60,AI in Action,Books,31.50
+61,Rugby Ball,Sports,27.99
+62,Table Tennis Bat,Sports,61.00
+63,Handball,Sports,26.99
+64,Walking Shoes,Sports,88.00
+65,Baseball Bat,Sports,77.00
+66,Graphic Tee,Clothing,18.99
+67,Slim Fit Jeans,Clothing,41.99
+68,Leather Jacket,Clothing,69.99
+69,High Top Sneakers,Clothing,82.99
+70,Zipper Hoodie,Clothing,32.75
+71,Electric Kettle,Home,92.00
+72,Food Processor,Home,57.50
+73,Handheld Vacuum,Home,143.00
+74,Cold Brew Maker,Home,81.00
+75,Essential Oil Diffuser,Home,126.00
+76,Smartphone Max,Electronics,689.00
+77,Workstation Laptop,Electronics,999.00
+78,Tablet Pro,Electronics,449.00
+79,Health Tracker,Electronics,259.00
+80,Wireless Earbuds,Electronics,169.99
+81,Python Projects,Books,33.00
+82,Statistics for Data Science,Books,43.25
+83,Neural Networks Simplified,Books,41.50
+84,Advanced SQL,Books,38.99
+85,Machine Intelligence,Books,29.99
+86,Cricket Ball,Sports,22.99
+87,Pickleball Paddle,Sports,67.00
+88,Frisbee,Sports,25.50
+89,Trail Running Shoes,Sports,93.50
+90,Golf Club,Sports,91.00
+91,Long Sleeve Tee,Clothing,19.50
+92,Denim Jeans,Clothing,44.00
+93,Bomber Jacket,Clothing,62.00
+94,Slip-on Sneakers,Clothing,77.00
+95,Crewneck Sweatshirt,Clothing,35.99
+96,Toaster Oven,Home,95.00
+97,Mini Blender,Home,54.00
+98,Stick Vacuum,Home,140.00
+99,Coffee Grinder,Home,83.00
+100,Air Cooler,Home,132.50
