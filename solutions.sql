@@ -48,3 +48,27 @@ select
     price 
 from products
 ORDER BY price DESC
+
+-- second section: (Sorting Data):
+
+-- QUESTION 11 (SOLUTION):
+select * from customers
+ORDER BY customer_name 
+
+-- QUESTION 12 (SOLUTION):
+select * from orders
+ORDER by order_total DESC
+
+-- QUESTION 13 (SOLUTION):
+select * from products
+order by category ASC,price asc
+
+-- QUESTION 14 (SOLUTION):
+select * from customers
+order by country,customer_name
+
+-- QUESTION 15 (SOLUTION):
+select top 10
+* from orders
+order by order_date 
+
