@@ -72,3 +72,25 @@ select top 10
 * from orders
 order by order_date 
 
+-- QUESTION 16 (SOLUTION):
+select * from customers
+ORDER BY SUBSTRING(email, CHARINDEX('@', email) + 1, LEN(email));
+
+-- QUESTION 17 (SOLUTION):
+select * from products
+ORDER by len(product_name)
+
+-- QUESTION 18 (SOLUTION):
+select * from orders
+order by order_date,order_total
+
+-- QUESTION 19 (SOLUTION):
+select customer_id, count(*) as no_orders from orders
+GROUP by customer_id
+ORDER by no_orders DESC
+
+-- QUESTION 20 (SOLUTION):
+select product_id, sum(quantity) as total_quantity_sold
+from order_items
+group by product_id
+ORDER BY total_quantity_sold DESC
