@@ -94,3 +94,31 @@ select product_id, sum(quantity) as total_quantity_sold
 from order_items
 group by product_id
 ORDER BY total_quantity_sold DESC
+
+-- Section 3. (Limiting Rows):
+
+-- QUESTION 21 (SOLUTION):
+select 
+    top 10 * from customers
+    ORDER by customer_id
+
+-- QUESTION 22 (SOLUTION):
+select top 5 * from orders
+order by order_date DESC
+
+-- QUESTION 23 (SOLUTION):
+select top 3 * from products
+order by price
+
+-- QUESTION 24 (SOLUTION):
+SELECT TOP 7 *
+FROM order_items
+ORDER BY quantity DESC;
+
+-- QUESTION 25 (SOLUTION):
+select 
+    top 5 customer_id,
+    sum(order_total) as total_spent
+from orders
+GROUP by customer_id
+order by total_spent DESC
