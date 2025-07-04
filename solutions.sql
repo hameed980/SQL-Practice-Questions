@@ -122,3 +122,34 @@ select
 from orders
 GROUP by customer_id
 order by total_spent DESC
+
+-- QUESTION 26 (SOLUTION):
+select top 10 *
+from orders
+ORDER by order_date DESC
+
+-- QUESTION 27 (SOLUTION):
+select
+     top 3 country,
+     count(*) as most_customers
+from customers
+group by country
+ORDER by most_customers
+
+-- QUESTION 28 (SOLUTION):
+select 
+    top 5 category,
+    count(*) as product_count
+from products
+GROUP BY category
+ORDER BY  product_count DESC
+
+-- QUESTION 29 (SOLUTION):
+select top 10 * from customers
+where country = 'uk'
+order by customer_id 
+
+-- QUESTION 30 (SOLUTION):
+SELECT TOP 5 *
+FROM products
+ORDER BY NEWID(); 
