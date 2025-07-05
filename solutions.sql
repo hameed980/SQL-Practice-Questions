@@ -153,3 +153,25 @@ order by customer_id
 SELECT TOP 5 *
 FROM products
 ORDER BY NEWID(); 
+
+-- Section 4 (Filtering Data):
+
+-- QUESTION 31 (SOLUTION):
+SELECT * from customers
+where country = 'usa'
+
+-- QUESTION 32 (SOLUTION):
+SELECT * from products
+where price > 100
+
+-- QUESTION 33 (SOLUTION):
+select * from orders
+where order_date BETWEEN '2024-11-07' and '2024-12-20'
+
+-- QUESTION 34 (SOLUTION):
+SELECT * from orders
+where order_total > (select AVG(order_total) from orders)
+
+-- QUESTION 35 (SOLUTION):
+SELECT * from customers
+where email like '%.com'
