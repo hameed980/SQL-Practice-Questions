@@ -175,3 +175,22 @@ where order_total > (select AVG(order_total) from orders)
 -- QUESTION 35 (SOLUTION):
 SELECT * from customers
 where email like '%.com'
+
+-- QUESTION 36 (SOLUTION):
+select * from order_items
+where quantity between 5 and 9
+
+-- QUESTION 37 (SOLUTION):
+select * from products
+where category != 'books'
+
+-- QUESTION 38 (SOLUTION):
+SELECT * from customers
+where customer_name like('a%')
+
+-- QUESTION 39 (SOLUTION):
+
+-- QUESTION 40 (SOLUTION):
+SELECT *
+FROM products
+WHERE price % 2 = 0;
