@@ -193,4 +193,33 @@ where customer_name like('a%')
 -- QUESTION 40 (SOLUTION):
 SELECT *
 FROM products
-WHERE price % 2 = 0;
+WHERE price % 2 = 0
+
+-- Section 5 (Joining Tables):
+
+-- QUESTION 41 (SOLUTION):
+select c.customer_name,o.order_date from orders as o
+INNER JOIN customers as c
+ON o.customer_id = c.customer_id
+
+-- QUESTION 42 (SOLUTION):
+SELECT * from orders as o
+FULL OUTER JOIN order_items as oi 
+ON o.order_id = oi.order_id
+FULL OUTER JOIN products as p 
+ON oi.product_id = p.product_id
+
+-- QUESTION 43 (SOLUTION):
+select 
+    p.product_id,
+    p.product_name,
+     Sum(oi.quantity) total_quantity_sold
+from products as p
+inner join order_items as oi
+on p.product_id = oi.product_id
+group by     p.product_id,p.product_name
+ORDER by total_quantity_sold DESC
+
+-- QUESTION 44 (SOLUTION):
+select * from customers
+-- QUESTION 45 (SOLUTION):
