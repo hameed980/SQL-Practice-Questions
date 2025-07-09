@@ -222,4 +222,12 @@ ORDER by total_quantity_sold DESC
 
 -- QUESTION 44 (SOLUTION):
 select * from customers
+
 -- QUESTION 45 (SOLUTION):
+SELECT AVG(order_count * 1.0) AS avg_orders_per_customer
+FROM (
+    SELECT customer_id, COUNT(*) AS order_count
+    FROM orders
+    GROUP BY customer_id
+) AS customer_orders;
+
