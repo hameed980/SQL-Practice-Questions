@@ -231,3 +231,38 @@ FROM (
     GROUP BY customer_id
 ) AS customer_orders;
 
+
+-- QUESTION 46 (SOLUTION):
+SELECT * 
+FROM customers AS c
+LEFT JOIN orders AS o 
+ON c.customer_id = o.customer_id;
+
+-- QUESTION 47 (SOLUTION):
+SELECT *
+FROM products AS p
+LEFT JOIN order_items AS o ON p.product_id = o.product_id
+WHERE o.product_id IS NULL;
+
+-- QUESTION 48 (SOLUTION):
+SELECT o.order_id, SUM(oi.quantity) AS total_items
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY o.order_id;
+
+-- QUESTION 49 (SOLUTION):
+select c.customer_name,o.order_date,p.product_name
+from customers as c 
+JOIN orders as o
+ON c.customer_id = o.customer_id
+JOIN order_items as oi 
+ON o.order_id = oi.order_id
+JOIN products as p 
+on oi.product_id = p.product_id
+
+-- QUESTION 50 (SOLUTION).
+select c.customer_id,c.customer_name ,MAX(o.order_date) as latest_orders
+from customers as c 
+JOIN orders as o
+ON c.customer_id = o.customer_id
+GROUP by c.customer_id,c.customer_name
