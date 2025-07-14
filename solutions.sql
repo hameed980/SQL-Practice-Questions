@@ -221,7 +221,13 @@ group by     p.product_id,p.product_name
 ORDER by total_quantity_sold DESC
 
 -- QUESTION 44 (SOLUTION):
-select * from customers
+SELECT DISTINCT c.customer_id, c.customer_name, c.email
+FROM customers c
+JOIN orders o ON c.customer_id = o.customer_id
+JOIN order_items oi ON o.order_id = oi.order_id
+JOIN products p ON oi.product_id = p.product_id
+WHERE p.product_name = 'Smartphone';
+
 
 -- QUESTION 45 (SOLUTION):
 SELECT AVG(order_count * 1.0) AS avg_orders_per_customer
@@ -266,3 +272,24 @@ from customers as c
 JOIN orders as o
 ON c.customer_id = o.customer_id
 GROUP by c.customer_id,c.customer_name
+
+-- Section 6 (Grouping Data):
+
+-- QUESTION 51 (SOLUTION):
+SELECT 
+    c.country,
+    COUNT(o.order_id) as no_of_orders 
+from orders as o
+join customers as c
+on o.customer_id = c.customer_id
+GROUP by  c.country
+
+-- QUESTION 52 (SOLUTION):
+select customer_id, avg(order_total) as average_order_value
+from orders 
+GROUP BY customer_id
+ORDER by average_order_value DESC
+
+-- QUESTION 53 (SOLUTION):
+-- QUESTION 54 (SOLUTION):
+-- QUESTION 55 (SOLUTION):

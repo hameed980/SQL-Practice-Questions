@@ -50,7 +50,7 @@
 -- 5.1 Join orders and customers to get customer names and order dates.
 -- 5.2 Join orders, order_items, and products.
 -- 5.3 Find total quantity ordered per product.
--- 5.4 List customers who bought 'Product_10'.
+-- 5.4 List customers who bought 'Smartphone'.
 -- 5.5 Get average number of orders per customer.
 -- 5.6 Perform LEFT JOIN of customers and orders (include customers with no orders).
 -- 5.7 Identify products never ordered.
