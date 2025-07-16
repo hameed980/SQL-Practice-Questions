@@ -291,5 +291,63 @@ GROUP BY customer_id
 ORDER by average_order_value DESC
 
 -- QUESTION 53 (SOLUTION):
+select category,COUNT(*) as no_of_products
+from products
+GROUP BY category
+
 -- QUESTION 54 (SOLUTION):
+select 
+    product_id,
+    SUM(quantity) as total_quantity_sold
+FROM order_items
+group BY product_id
+order BY total_quantity_sold DESC
+
 -- QUESTION 55 (SOLUTION):
+SELECT 
+    order_id,
+    customer_id,
+    order_date,
+    MAX(order_total) as max_order 
+from orders
+GROUP BY order_id,order_date,customer_id
+ORDER by max_order DESC
+
+-- QUESTION 56 (SOLUTION):
+SELECT DATEPART(HOUR, order_date) AS order_hour, COUNT(*) AS order_count
+FROM orders
+GROUP BY DATEPART(HOUR, order_date)
+ORDER BY order_hour;
+
+-- QUESTION 57 (SOLUTION):
+SELECT 
+    p.category,
+    SUM(oi.quantity * oi.unit_price) AS total_revenue
+FROM products AS p
+JOIN order_items AS oi
+    ON p.product_id = oi.product_id
+GROUP BY p.category
+ORDER BY total_revenue DESC;
+
+-- QUESTION 58 (SOLUTION):
+SELECT RIGHT(email, LEN(email) - CHARINDEX('@', email)) AS domain, COUNT(*) AS customer_count
+FROM customers
+GROUP BY RIGHT(email, LEN(email) - CHARINDEX('@', email))
+ORDER BY customer_count DESC;
+
+-- QUESTION 59 (SOLUTION):
+select 
+    c.country,
+    sum(o.order_total) total_revenue
+from customers as c
+join orders as o
+on c.customer_id = o.customer_id
+GROUP by c.country
+order by total_revenue DESC
+
+-- QUESTION 60 (SOLUTION):
+SELECT DATENAME(WEEKDAY, o.order_date) AS weekday, SUM(oi.quantity) AS total_items
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+GROUP BY DATENAME(WEEKDAY, o.order_date)
+ORDER BY total_items DESC;
