@@ -350,4 +350,27 @@ SELECT DATENAME(WEEKDAY, o.order_date) AS weekday, SUM(oi.quantity) AS total_ite
 FROM orders o
 JOIN order_items oi ON o.order_id = oi.order_id
 GROUP BY DATENAME(WEEKDAY, o.order_date)
-ORDER BY total_items DESC;
+ORDER BY total_items DESC
+
+-- Section 7 .(Subqueries):
+
+-- QUESTION 61 (SOLUTION):
+SELECT 
+    customer_id, 
+    SUM(order_total) as total_order_amount
+from orders 
+GROUP by customer_id
+HAVING SUM(order_total) > (select AVG(order_total) from orders)
+
+-- QUESTION 62 (SOLUTION):
+SELECT product_id,product_name,category,price from products
+where price > (SELECT AVG(price) from products)
+
+-- QUESTION 63 (SOLUTION):
+SELECT TOP 1 customer_id, SUM(order_total) AS total_spent
+FROM orders
+GROUP BY customer_id
+ORDER BY total_spent DESC;
+
+-- QUESTION 64 (SOLUTION):
+-- QUESTION 65 (SOLUTION):
