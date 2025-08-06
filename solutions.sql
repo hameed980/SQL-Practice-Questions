@@ -373,4 +373,59 @@ GROUP BY customer_id
 ORDER BY total_spent DESC;
 
 -- QUESTION 64 (SOLUTION):
+SELECT
+     product_name
+from products
+where product_id in (
+    select 
+        top 5
+        product_id 
+    from  order_items 
+        group by product_id
+        ORDER by SUM(quantity) DESC
+)
 -- QUESTION 65 (SOLUTION):
+SELECT TOP 1 customer_id, COUNT(*) AS order_count
+FROM orders
+GROUP BY customer_id
+ORDER BY order_count DESC;
+
+-- QUESTION 66 (SOLUTION):
+SELECT * from customers
+WHERE customer_id NOT IN 
+(SELECT DISTINCT customer_id FROM orders)
+
+-- QUESTION 67 (SOLUTION):
+SELECT top 3 category ,COUNT(*) as total_product 
+from products
+GROUP by category 
+ORDER BY total_product DESC
+
+-- QUESTION 68 (SOLUTION):
+select 
+    product_id ,
+    sum(quantity) as total_qty
+from order_items
+group by product_id
+HAVING sum(quantity) >(
+
+SELECT avg(quantity) from order_items
+)
+
+-- QUESTION 69 (SOLUTION):
+select 
+    email,
+    count(*) as email_count
+from Customers
+group by email
+having count(*) >1
+
+-- QUESTION 70 (SOLUTION):
+SELECT DISTINCT o.order_id
+FROM orders o
+JOIN order_items oi ON o.order_id = oi.order_id
+WHERE oi.product_id = (
+    SELECT TOP 1 product_id
+    FROM products
+    ORDER BY price ASC
+);
