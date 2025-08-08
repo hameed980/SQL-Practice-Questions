@@ -429,3 +429,124 @@ WHERE oi.product_id = (
     FROM products
     ORDER BY price ASC
 );
+
+-- Section 8 (Set Operators):
+
+-- QUESTION 71 (SOLUTION):
+select * from customers
+where country = 'uk'
+UNION
+select * from customers
+where country = 'usa'
+
+-- QUESTION 72 (SOLUTION):
+SELECT product_id, product_name
+FROM products
+EXCEPT
+SELECT DISTINCT oi.product_id, p.product_name
+FROM order_items oi
+JOIN products p ON oi.product_id = p.product_id;
+
+-- QUESTION 73 (SOLUTION):
+SELECT order_id, order_date
+FROM orders
+WHERE MONTH(order_date) = 1
+UNION
+SELECT order_id, order_date
+FROM orders
+WHERE MONTH(order_date) = 2;
+
+-- QUESTION 74 (SOLUTION):
+SELECT product_id, product_name, category
+FROM products
+WHERE category = 'Electronics'
+
+-- QUESTION 75 (SOLUTION):
+SELECT product_id, product_name, category
+FROM products
+WHERE category = 'Electronics'
+UNION
+SELECT product_id, product_name, category
+FROM products
+WHERE category = 'Books';
+
+
+--  QUESTION 76 (SOLUTION):
+select order_id, customer_id, order_date from orders
+where month(order_date) = 1
+intersect
+SELECT o.order_id, o.customer_id, o.order_date
+FROM orders o
+JOIN customers c ON o.customer_id = c.customer_id
+WHERE c.country = 'UK';
+
+--  QUESTION 77 (SOLUTION):
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Books'
+)
+EXCEPT
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Electronics'
+)
+
+UNION
+
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Electronics'
+)
+EXCEPT
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Books'
+);
+
+--  QUESTION 78 (SOLUTION):
+SELECT name, email
+FROM customers
+UNION ALL
+SELECT name, email
+FROM partners;
+
+--  QUESTION 79 (SOLUTION):
+SELECT email
+FROM customers
+WHERE country = 'USA'
+INTERSECT
+SELECT email
+FROM customers
+WHERE country = 'UK';
+
+--  QUESTION 80 (SOLUTION):
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Home'
+)
+EXCEPT
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Sports'
+)
+
+UNION
+
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Sports'
+)
+EXCEPT
+(
+    SELECT product_id, product_name, category
+    FROM products
+    WHERE category = 'Home'
+);
+

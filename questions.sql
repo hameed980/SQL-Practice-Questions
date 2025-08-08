@@ -87,11 +87,11 @@
 -- 8.2 Get all products that have never been ordered using EXCEPT.
 -- 8.3 List all orders placed in January and February using UNION.
 -- 8.4 Show electronics products that are not in the Sports category.
--- 8.5 Combine two product lists from different sources.
+-- 8.5 Combine two product lists from different sources — but using same table
 -- 8.6 Orders from customers in UK and also placed in Jan.
 -- 8.7 Products in either "Books" or "Electronics" but not both.
 -- 8.8 Combine customer and partner leads using UNION ALL.
--- 8.9 Emails that exist in both customer and supplier tables.
+-- 8.9 Emails that exist in both lists — but with one table
 -- 8.10 Products only in one of two categories.
 
 -- 9. Common Table Expressions (CTE)
