@@ -11,6 +11,7 @@ select distinct country from customers
 
 -- QUESTION 4 (SOLUTION):
 SELECT order_total as "total_order_amount" from orders
+use [PRACQUES_DB]
 
 -- QUESTION 5 (SOLUTION):
 select concat(product_name,' ',category) as product_info  from products
@@ -36,11 +37,10 @@ order by category
 -- QUESTION 9 (SOLUTION):
 select 
     category, 
-    count(*) product_count 
+    count(category) product_count 
 from products
 group BY category
 having COUNT(*) >30
-
 -- QUESTION 10 (SOLUTION):
 select 
     top 5
@@ -235,6 +235,7 @@ FROM (
     SELECT customer_id, COUNT(*) AS order_count
     FROM orders
     GROUP BY customer_id
+     order by customer_id asc
 ) AS customer_orders;
 
 
@@ -550,3 +551,33 @@ EXCEPT
     WHERE category = 'Home'
 );
 
+-- Section 9: Common Table Expressions (CTE):
+
+--  QUESTION 81 (SOLUTION):
+with cte as (
+    select customer_id , 
+    sum (order_total) as total_order_vlaue 
+    from orders
+    GROUP by customer_id
+)
+SELECT * from cte
+ORDER BY total_order_vlaue DESC
+
+--  QUESTION 82 (SOLUTION):
+with revenue as (
+    SELECT c.country, SUM(o.order_total) AS total_revenue
+    FROM customers c
+    JOIN orders o ON c.customer_id = o.customer_id
+    GROUP BY c.country
+)
+SELECT top 3 * from revenue
+order by total_revenue DESC
+
+--  QUESTION 83 (SOLUTION):
+--  QUESTION 84 (SOLUTION):
+--  QUESTION 85 (SOLUTION):
+--  QUESTION 86 (SOLUTION):
+--  QUESTION 87 (SOLUTION):
+--  QUESTION 88 (SOLUTION):
+--  QUESTION 89 (SOLUTION):
+--  QUESTION 90 (SOLUTION):
