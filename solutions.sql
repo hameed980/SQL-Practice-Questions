@@ -574,6 +574,20 @@ SELECT top 3 * from revenue
 order by total_revenue DESC
 
 --  QUESTION 83 (SOLUTION):
+
+WITH ProductRevenue AS (
+    SELECT 
+        p.product_id,
+        p.product_name,
+        SUM(oi.quantity * oi.unit_price) AS revenue
+    FROM products p
+    JOIN order_items oi ON p.product_id = oi.product_id
+    GROUP BY p.product_id, p.product_name
+)
+SELECT *,
+       RANK() OVER (ORDER BY revenue DESC) AS revenue_rank
+FROM ProductRevenue;
+
 --  QUESTION 84 (SOLUTION):
 --  QUESTION 85 (SOLUTION):
 --  QUESTION 86 (SOLUTION):
