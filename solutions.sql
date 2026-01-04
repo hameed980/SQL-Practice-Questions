@@ -589,6 +589,18 @@ SELECT *,
 FROM ProductRevenue;
 
 --  QUESTION 84 (SOLUTION):
+WITH CustomerOrders AS (
+    SELECT 
+        customer_id,
+        order_id,
+        order_date,
+        ROW_NUMBER() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rn
+    FROM orders
+)
+SELECT customer_id, order_id, order_date
+FROM CustomerOrders
+WHERE rn = 1;
+
 --  QUESTION 85 (SOLUTION):
 --  QUESTION 86 (SOLUTION):
 --  QUESTION 87 (SOLUTION):
