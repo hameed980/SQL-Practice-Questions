@@ -602,6 +602,16 @@ FROM CustomerOrders
 WHERE rn = 1;
 
 --  QUESTION 85 (SOLUTION):
+with monthly_revenue as(
+    select 
+        YEAR(order_date) as year,
+        MONTH(order_date) as month,
+        SUM(order_total) as revenue
+    FROM orders
+    GROUP by YEAR(order_date), MONTH(order_date)
+)
+SELECT * from monthly_revenue
+ORDER by [year],[month]
 --  QUESTION 86 (SOLUTION):
 --  QUESTION 87 (SOLUTION):
 --  QUESTION 88 (SOLUTION):
