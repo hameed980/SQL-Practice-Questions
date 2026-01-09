@@ -612,7 +612,17 @@ with monthly_revenue as(
 )
 SELECT * from monthly_revenue
 ORDER by [year],[month]
+
 --  QUESTION 86 (SOLUTION):
+WITH CustomerOrderCount AS (
+    SELECT customer_id, COUNT(*) AS order_count
+    FROM orders
+    GROUP BY customer_id
+)
+SELECT *
+FROM CustomerOrderCount
+WHERE order_count > 5
+
 --  QUESTION 87 (SOLUTION):
 --  QUESTION 88 (SOLUTION):
 --  QUESTION 89 (SOLUTION):
