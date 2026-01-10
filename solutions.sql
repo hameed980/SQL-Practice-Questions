@@ -624,6 +624,7 @@ FROM CustomerOrderCount
 WHERE order_count > 5
 
 --  QUESTION 87 (SOLUTION):
+
 --  QUESTION 88 (SOLUTION):
 --  QUESTION 89 (SOLUTION):
 --  QUESTION 90 (SOLUTION):
