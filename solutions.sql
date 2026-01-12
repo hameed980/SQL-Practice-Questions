@@ -624,6 +624,20 @@ FROM CustomerOrderCount
 WHERE order_count > 5
 
 --  QUESTION 87 (SOLUTION):
+with ProductSalesSummary as (
+    SELECT 
+        oi.product_id,
+        SUM(oi.quantity) AS total_quantity_sold
+    FROM order_items as oi
+    GROUP BY oi.product_id
+)
+SELECT 
+    p.product_name,
+    ps.total_quantity_sold
+FROM ProductSalesSummary ps
+JOIN products as  p ON ps.product_id = p.product_id
+WHERE ps.total_quantity_sold > 100
+ORDER BY ps.total_quantity_sold DESC
 
 --  QUESTION 88 (SOLUTION):
 --  QUESTION 89 (SOLUTION):
