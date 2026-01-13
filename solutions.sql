@@ -640,5 +640,13 @@ WHERE ps.total_quantity_sold > 100
 ORDER BY ps.total_quantity_sold DESC
 
 --  QUESTION 88 (SOLUTION):
+WITH AllOrders AS (
+    SELECT *
+    FROM orders
+)
+SELECT COUNT(*) AS total_orders_count
+FROM AllOrders;
+
+
 --  QUESTION 89 (SOLUTION):
 --  QUESTION 90 (SOLUTION):
