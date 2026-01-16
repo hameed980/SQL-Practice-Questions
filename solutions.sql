@@ -649,4 +649,14 @@ FROM AllOrders;
 
 
 --  QUESTION 89 (SOLUTION):
+WITH OrderBasketSize AS (
+    SELECT 
+        order_id,
+        SUM(quantity) AS total_items
+    FROM order_items
+    GROUP BY order_id
+)
+SELECT 
+    AVG(CAST(total_items AS FLOAT)) AS avg_basket_size
+FROM OrderBasketSize;
 --  QUESTION 90 (SOLUTION):
