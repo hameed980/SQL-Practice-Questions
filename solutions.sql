@@ -647,7 +647,6 @@ WITH AllOrders AS (
 SELECT COUNT(*) AS total_orders_count
 FROM AllOrders;
 
-
 --  QUESTION 89 (SOLUTION):
 WITH OrderBasketSize AS (
     SELECT 
@@ -659,4 +658,28 @@ WITH OrderBasketSize AS (
 SELECT 
     AVG(CAST(total_items AS FLOAT)) AS avg_basket_size
 FROM OrderBasketSize;
+
+
 --  QUESTION 90 (SOLUTION):
+WITH ElectronicsOrders AS (
+    SELECT 
+        o.customer_id,
+        oi.quantity * oi.unit_price AS revenue
+    FROM orders o
+    JOIN order_items oi ON o.order_id = oi.order_id
+    JOIN products p ON oi.product_id = p.product_id
+    WHERE p.category = 'Electronics'
+),
+CustomerRevenue AS (
+    SELECT 
+        customer_id,
+        SUM(revenue) AS total_revenue
+    FROM ElectronicsOrders
+    GROUP BY customer_id
+)
+SELECT TOP 1
+    c.customer_name,
+    cr.total_revenue
+FROM CustomerRevenue cr
+JOIN customers c ON cr.customer_id = c.customer_id
+ORDER BY cr.total_revenue DESC;
