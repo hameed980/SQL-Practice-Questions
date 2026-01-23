@@ -684,5 +684,7 @@ FROM CustomerRevenue cr
 JOIN customers c ON cr.customer_id = c.customer_id
 ORDER BY cr.total_revenue DESC;
 
-# -- Section 10.  (Modifying Data)
+# -- Section 10.  (Modifying Data):
+
+
 
