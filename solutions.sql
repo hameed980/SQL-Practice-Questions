@@ -684,7 +684,10 @@ FROM CustomerRevenue cr
 JOIN customers c ON cr.customer_id = c.customer_id
 ORDER BY cr.total_revenue DESC;
 
-# -- Section 10.  (Modifying Data):
+-- Section 10.  (Modifying Data):
 
-
+-- QUESTION 91 (SOLUTION):
+UPDATE customers
+SET customer_name = 'Abdul'
+WHERE customer_id = 5;
 
