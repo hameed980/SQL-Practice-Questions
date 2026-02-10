@@ -693,6 +693,5 @@ WHERE customer_id = 5;
 
 -- QUESTION 92 (SOLUTION):
 update products
-set price = '600.00'
-where product_id = 1 
-
+SET price = 649.99
+WHERE product_name = 'Smartphone';
