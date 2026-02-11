@@ -703,3 +703,8 @@ VALUES(101,'Smartphone','Electronics',43.2222)
 -- QUESTION 94 (SOLUTION):
 DELETE FROM order_items
 WHERE order_item_id = 10;
+
+-- QUESTION 95 (SOLUTION):
+update products
+set price = price * 1.10
+WHERE product_name = 'electronics'
