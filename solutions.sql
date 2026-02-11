@@ -695,3 +695,7 @@ WHERE customer_id = 5;
 update products
 SET price = 649.99
 WHERE product_name = 'Smartphone';
+
+-- QUESTION 93 (SOLUTION):
+INSERT into products
+VALUES(101,'Smartphone','Electronics',43.2222)
