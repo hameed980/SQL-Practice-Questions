@@ -699,3 +699,7 @@ WHERE product_name = 'Smartphone';
 -- QUESTION 93 (SOLUTION):
 INSERT into products
 VALUES(101,'Smartphone','Electronics',43.2222)
+
+-- QUESTION 94 (SOLUTION):
+DELETE FROM order_items
+WHERE order_item_id = 10;
